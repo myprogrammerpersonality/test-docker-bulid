@@ -11,5 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build -t first-docker:2.0 -f Dockerfile .
+    - env:
+        AL: ${{ secrets.ALI }}
+      run: docker build --build-arg SOME_ENV_VAR=$AL -t first-docker:2.0 -f Dockerfile .
 
