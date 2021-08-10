@@ -1,7 +1,11 @@
 FROM jupyter/scipy-notebook
 
-ARG SOME_ENV_VAR
-RUN echo $SOME_ENV_VAR
-ENV SOME_VAR=${SOME_ENV_VAR}
+COPY test.py ./test.py
 
-RUN echo $SOME_VAR
+ARG REGION
+RUN echo $REGION
+RUN python3 test.py
+
+ENV ENV_REGION=${REGION}
+RUN echo $ENV_REGION
+RUN python3 test.py

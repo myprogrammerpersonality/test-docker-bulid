@@ -11,5 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build --build-arg SOME_ENV_VAR=${{secrets.REGION}} -t first-docker:3.0 -f Dockerfile .
+      run: docker build --build-arg REGION=${{secrets.REGION}} -t first-docker:4.0 -f Dockerfile .
 
