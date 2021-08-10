@@ -8,5 +8,5 @@ LABEL maintainer_email="aliyzd1379@gmail.com"
 
 #COPY train.py ./train.py
 
-RUN echo ${{secrets.ALI}}
+RUN echo ${{ secrets.ALI }}
 #RUN python3 train.py
