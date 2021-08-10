@@ -4,9 +4,9 @@ LABEL maintainer="ali_yazdizadeh"
 LABEL maintainer_email="aliyzd1379@gmail.com"
 
 # Install dependencies:
-RUN pip install flask
+#RUN pip install flask
 
 COPY train.py ./train.py
 
-RUN echo $ALI
+RUN echo $LI
 #RUN python3 train.py
