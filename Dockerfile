@@ -8,4 +8,5 @@ RUN pip install flask
 
 COPY train.py ./train.py
 
-RUN python3 train.py
+RUN echo $ALI
+#RUN python3 train.py
