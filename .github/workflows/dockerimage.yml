@@ -13,5 +13,5 @@ jobs:
     - name: Build the Docker image
       env:
         AL: ${{ secrets.ALI }}
-      run: docker build --build-arg SOME_ENV_VAR=$AL -t first-docker:2.0 -f Dockerfile .
+      run: docker build --build-arg SOME_ENV_VAR=hello -t first-docker:2.0 -f Dockerfile .
 
